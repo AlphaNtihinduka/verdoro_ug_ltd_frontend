@@ -3,13 +3,12 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import CarComponent from "./CarComponent";
 import { setCars } from "../redux/actions/carActions";
-import { Dispatch } from "react";
+import { useDispatch } from "react-redux";
 
 
 const CarListing = () => {
     const cars = useSelector((state) => state)
     const dispatch = useDispatch()
-    console.log(cars)
     const fetchdata = async () => {
         const response = await axios
         .get("http://127.0.0.1:5000/cars")
@@ -21,10 +20,8 @@ const CarListing = () => {
 
     useEffect(() => {
         fetchdata()
-    },[])
-
-    dispatch
-
+    },[]) // eslint-disable-line react-hooks/exhaustive-deps
+console.log("cars API", cars)
     return(
         <>
         <h1>Car listing</h1>
