@@ -30,6 +30,7 @@ console.log("cars detail", car)
         <>
         <div className="image"><img src={car.image} alt="car.name" /></div>
         <h1>{car.name}</h1>
+        <p>Fee per day: {car.price_per_day}</p>
         </>
     )
 }

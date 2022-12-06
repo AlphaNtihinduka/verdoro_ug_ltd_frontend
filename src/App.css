@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.image {
+  height: 20rem;
+  width: 18rem;
+  margin: 0 auto;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
